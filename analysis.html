@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player Analysis | Football Insights</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        dark: {
+                            800: '#1e293b',
+                            900: '#0f172a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .transition-all {
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-dark-900 text-gray-100 flex h-screen">
+    <!-- Sidebar -->
+    <div id="sidebar" class="bg-dark-800 text-white w-64 h-full flex flex-col border-r border-gray-700">
+        <div class="p-4 flex items-center justify-between border-b border-gray-700">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-futbol text-2xl"></i>
+                <span class="font-bold text-xl">Football Insights</span>
+            </div>
+        </div>
+        <nav class="flex-1 overflow-y-auto">
+            <div class="p-2">
+                <a href="index.html" class="flex items-center space-x-3 p-3 rounded hover:bg-gray-700 text-white">
+                    <i class="fas fa-home w-6 text-center"></i>
+                    <span>Homepage</span>
+                </a>
+                <a href="news.html" class="flex items-center space-x-3 p-3 rounded hover:bg-gray-700 text-white">
+                    <i class="fas fa-newspaper w-6 text-center"></i>
+                    <span>News</span>
+                </a>
+                <a href="entertainment.html" class="flex items-center space-x-3 p-3 rounded hover:bg-gray-700 text-white">
+                    <i class="fas fa-video w-6 text-center"></i>
+                    <span>Entertainment</span>
+                </a>
+                <a href="stats.html" class="flex items-center space-x-3 p-3 rounded hover:bg-gray-700 text-white">
+                    <i class="fas fa-table w-6 text-center"></i>
+                    <span>Stats</span>
+                </a>
+                <a href="video.html" class="flex items-center space-x-3 p-3 rounded hover:bg-gray-700 text-white">
+                    <i class="fas fa-upload w-6 text-center"></i>
+                    <span>Video Analysis</span>
+                </a>
+                <a href="analysis.html" class="flex items-center space-x-3 p-3 rounded bg-gray-700 text-white">
+                    <i class="fas fa-chart-bar w-6 text-center"></i>
+                    <span>Comparision</span>
+                </a>
+                <a href="fixtures.html" class="flex items-center space-x-3 p-3 rounded hover:bg-gray-700 text-white">
+                    <i class="fas fa-calendar-alt w-6 text-center"></i>
+                    <span>Fixtures</span>
+                </a>
+                <a href="features.html" class="flex items-center space-x-3 p-3 rounded hover:bg-gray-700 text-white">
+                    <i class="fas fa-list w-6 text-center"></i>
+                    <span>Features</span>
+                </a>
+            </div>
+        </nav>
+        <div class="p-4 border-t border-gray-700">
+            <a href="login.html" class="flex items-center space-x-3 p-3 rounded hover:bg-gray-700 text-white">
+                <i class="fas fa-sign-in-alt w-6 text-center"></i>
+                <span class="nav-text">Login</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="flex-1 overflow-y-auto p-8">
+        <h1 class="text-3xl font-bold text-white mb-6">Player Analysis</h1>
+
+        <div class="bg-dark-800 p-6 rounded-lg shadow-lg mb-6">
+            <h2 class="text-2xl font-semibold text-white mb-4">Compare Players</h2>
+            <div class="flex flex-col space-y-4">
+                <input type="text" placeholder="Enter Player 1 Name" class="p-2 rounded bg-dark-700 text-white">
+                <input type="text" placeholder="Enter Player 2 Name" class="p-2 rounded bg-dark-700 text-white">
+                <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded">Compare</button>
+            </div>
+        </div>
+
+        <div class="bg-dark-800 p-6 rounded-lg shadow-lg">
+            <h2 class="text-2xl font-semibold text-white mb-4">Comparison Results</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Overview -->
+                <div class="bg-dark-900 p-4 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold text-white mb-2">Overview</h3>
+                    <table class="w-full text-white">
+                        <tr>
+                            <th class="text-left">Appearance</th>
+                            <td class="text-right">20</td>
+                            <td class="text-right">25</td>
+                        </tr>
+                        <tr>
+                            <th class="text-left">Goals</th>
+                            <td class="text-right">10</td>
+                            <td class="text-right">15</td>
+                        </tr>
+                        <tr>
+                            <th class="text-left">Assists</th>
+                            <td class="text-right">5</td>
+                            <td class="text-right">10</td>
+                        </tr>
+                        <tr>
+                            <th class="text-left">Clean Sheets</th>
+                            <td class="text-right">5</td>
+                            <td class="text-right">10</td>
+                        </tr>
+                        <tr>
+                            <th class="text-left">Saves</th>
+                            <td class="text-right">50</td>
+                            <td class="text-right">75</td>
+                        </tr>
+                        <tr>
+                            <th class="text-left">Yellow Cards</th>
+                            <td class="text-right">2</td>
+                            <td class="text-right">5</td>
+                        </tr>
+                        <tr>
+                            <th class="text-left">Red Cards</th>
+                            <td class="text-right">0</td>
+                            <td class="text-right">1</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <!-- Attacking -->
+                <div class="bg-dark-900 p-4 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold text-white mb-2">Attacking</h3>
+                    <table class="w-full text-white">
+                        <tr>
+                            <th class="text-left">Goals</th>
+                            <td class="text-right">10</td>
+                            <td class="text-right">15</td>
+                        </tr>
+                        <tr>
+                            <th class="text-left">Goals per Match</th>
+                            <td class="text-right">0.5</td>
+                            <td class="text-right">0.75</td>
+                        </tr>
+                        <tr>
+                            <th class="text-left">Minutes per Goal</th>
+                            <td class="text-right">90</td>
+                            <td class="text-right">120</td>
+                        </tr>
+                        <tr>
+                            <th class="text-left">Shots</th>
+                            <td class="text-right">50</td>
+                            <td class="text-right">75</td>
+                        </tr>
+                        <tr>
+                            <th class="text-left">Shots on Target</th>
+                            <td class="text-right">20</td>
+                            <td class="text-right">30</td>
+                        </tr>
+                        <tr>
+                            <th class="text-left">Shooting Accuracy</th>
+                            <td class="text-right">40%</td>
+                            <td class="text-right">50%</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <!-- Teamplay -->
+                <div class="bg-dark-900 p-4 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold text-white mb-2">Teamplay</h3>
+                    <table class="w-full text-white">
+                        <tr>
+                            <th class="text-left">Assists</th>
+                            <td class="text-right">5</td>
+                            <td class="text-right">10</td>
+                        </tr>
+                        <tr>
+                            <th class="text-left">Big Chances Created</th>
+                            <td class="text-right">10</td>
+                            <td class="text-right">20</td>
+                        </tr>
+                        <tr>
+                            <th class="text-left">Passes</th>
+                            <td class="text-right">500</td>
+                            <td class="text-right">750</td>
+                        </tr>
+                        <tr>
+                            <th class="text-left">Pass Completion Rate</th>
+                            <td class="text-right">80%</td>
+                            <td class="text-right">90%</td>
+                        </tr>
+                        <tr>
+                            <th class="text-left">Touches</th>
+                            <td class="text-right">1000</td>
+                            <td class="text-right">1500</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <!-- Defending -->
+                <div class="bg-dark-900 p-4 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold text-white mb-2">Defending</h3>
+                    <table class="w-full text-white">
+                        <tr>
+                            <th class="text-left">Clean Sheets</th>
+                            <td class="text-right">5</td>
+                            <td class="text-right">10</td>
+                        </tr>
+                        <tr>
+                            <th class="text-left">Goals Conceded</th>
+                            <td class="text-right">10</td>
+                            <td class="text-right">15</td>
+                        </tr>
+                        <tr>
+                            <th class="text-left">Blocks</th>
+                            <td class="text-right">5</td>
+                            <td class="text-right">10</td>
+                        </tr>
+                        <tr>
+                            <th class="text-left">Interceptions</th>
+                            <td class="text-right">10</td>
+                            <td class="text-right">20</td>
+                        </tr>
+                        <tr>
+                            <th class="text-left">Tackles</th>
+                            <td class="text-right">20</td>
+                            <td class="text-right">30</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <!-- Goalkeeping -->
+                <div class="bg-dark-900 p-4 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold text-white mb-2">Goalkeeping</h3>
+                    <table class="w-full text-white">
+                        <tr>
+                            <th class="text-left">Clean Sheets</th>
+                            <td class="text-right">5</td>
+                            <td class="text-right">10</td>
+                        </tr>
+                        <tr>
+                            <th class="text-left">Goals Conceded</th>
+                            <td class="text-right">10</td>
+                            <td class="text-right">15</td>
+                        </tr>
+                        <tr>
+                            <th class="text-left">Saves</th>
+                            <td class="text-right">50</td>
+                            <td class="text-right">75</td>
+                        </tr>
+                        <tr>
+                            <th class="text-left">Saves per Match</th>
+                            <td class="text-right">2.5</td>
+                            <td class="text-right">3.75</td>
+                        </tr>
+                        <tr>
+                            <th class="text-left">Save Success Rate</th>
+                            <td class="text-right">80%</td>
+                            <td class="text-right">90%</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <!-- Matches -->
+                <div class="bg-dark-900 p-4 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold text-white mb-2">Matches</h3>
+                    <table class="w-full text-white">
+                        <tr>
+                            <th class="text-left">Appearance</th>
+                            <td class="text-right">20</td>
+                            <td class="text-right">25</td>
+                        </tr>
+                        <tr>
+                            <th class="text-left">Minutes Played</th>
+                            <td class="text-right">1800</td>
+                            <td class="text-right">2250</td>
+                        </tr>
+                        <tr>
+                            <th class="text-left">Matches Started</th>
+                            <td class="text-right">15</td>
+                            <td class="text-right">20</td>
+                        </tr>
+                        <tr>
+                            <th class="text-left">Subbed On</th>
+                            <td class="text-right">5</td>
+                            <td class="text-right">10</td>
+                        </tr>
+                        <tr>
+                            <th class="text-left">Subbed Off</th>
+                            <td class="text-right">5</td>
+                            <td class="text-right">10</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Features</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        dark: {
+                            800: '#1e293b',
+                            900: '#0f172a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .transition-all {
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+
+<body class="bg-dark-900 text-gray-100 flex h-screen">
+    <!-- Sidebar -->
+    <div id="sidebar" class="bg-dark-800 text-white w-64 h-full flex flex-col border-r border-gray-700">
+        <div class="p-4 flex items-center justify-between border-b border-gray-700">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-futbol text-2xl"></i>
+                <span class="font-bold text-xl">Football Insights</span>
+            </div>
+        </div>
+        <nav class="flex-1 overflow-y-auto">
+            <div class="p-2">
+                <a href="index.html" class="flex items-center space-x-3 p-3 rounded hover:bg-gray-700 text-white">
+                    <i class="fas fa-home w-6 text-center"></i>
+                    <span>Homepage</span>
+                </a>
+                <a href="news.html" class="flex items-center space-x-3 p-3 rounded hover:bg-gray-700 text-white">
+                    <i class="fas fa-newspaper w-6 text-center"></i>
+                    <span>News</span>
+                </a>
+                <a href="entertainment.html"
+                    class="flex items-center space-x-3 p-3 rounded hover:bg-gray-700 text-white">
+                    <i class="fas fa-video w-6 text-center"></i>
+                    <span>Entertainment</span>
+                </a>
+                <a href="stats.html" class="flex items-center space-x-3 p-3 rounded hover:bg-gray-700 text-white">
+                    <i class="fas fa-table w-6 text-center"></i>
+                    <span>Stats</span>
+                </a>
+                <a href="video.html" class="flex items-center space-x-3 p-3 rounded hover:bg-gray-700 text-white">
+                    <i class="fas fa-upload w-6 text-center"></i>
+                    <span>Video Analysis</span>
+                </a>
+                <a href="analysis.html" class="flex items-center space-x-3 p-3 rounded hover:bg-gray-700 text-white">
+                    <i class="fas fa-chart-bar w-6 text-center"></i>
+                    <span>Comparision</span>
+                </a>
+                <a href="fixtures.html" class="flex items-center space-x-3 p-3 rounded hover:bg-gray-700 text-white">
+                    <i class="fas fa-calendar-alt w-6 text-center"></i>
+                    <span>Fixtures</span>
+                </a>
+                <a href="features.html" class="flex items-center space-x-3 p-3 rounded bg-gray-700 text-white">
+                    <i class="fas fa-list w-6 text-center"></i>
+                    <span>Features</span>
+                </a>
+            </div>
+        </nav>
+        <div class="p-4 border-t border-gray-700">
+            <a href="login.html" class="flex items-center space-x-3 p-3 rounded hover:bg-gray-700 text-white">
+                <i class="fas fa-sign-in-alt w-6 text-center"></i>
+                <span class="nav-text">Login</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="flex-1 overflow-y-auto p-8">
+        <h1 class="text-3xl font-bold text-white mb-6">Features</h1>
+
+        <!-- VStack Container -->
+        <div class="flex flex-col space-y-6">
+            <!-- Video Analysis Card -->
+            <div class="bg-dark-800 p-6 rounded-lg shadow-lg">
+                <h2 class="text-2xl font-semibold text-white mb-4">Video Analysis</h2>
+                <p class="text-gray-300">Our video analysis feature uses computer vision techniques to analyze match
+                    footage and provide insights on player performance.</p>
+                <div class="flex flex-row overflow-x-auto">
+                    <div class="bg-dark-900 p-4 rounded-lg shadow-lg w-48 mx-2">
+                        <h3 class="text-xl font-semibold text-white mb-2">Player Tracking</h3>
+                        <p class="text-gray-300">Track player movement, speed, and distance covered.</p>
+                    </div>
+                    <div class="bg-dark-900 p-4 rounded-lg shadow-lg w-48 mx-2">
+                        <h3 class="text-xl font-semibold text-white mb-2">Ball Detection</h3>
+                        <p class="text-gray-300">Detect ball location, speed, and trajectory.</p>
+                    </div>
+                    <div class="bg-dark-900 p-4 rounded-lg shadow-lg w-48 mx-2">
+                        <h3 class="text-xl font-semibold text-white mb-2">Action Recognition</h3>
+                        <p class="text-gray-300">Recognize player actions, such as passing, shooting, or tackling.</p>
+                    </div>
+                    <div class="bg-dark-900 p-4 rounded-lg shadow-lg w-48 mx-2">
+                        <h3 class="text-xl font-semibold text-white mb-2">Event Detection</h3>
+                        <p class="text-gray-300">Detect specific events, such as goals, penalties, or free kicks.</p>
+                    </div>
+                    <div class="bg-dark-900 p-4 rounded-lg shadow-lg w-48 mx-2">
+                        <h3 class="text-xl font-semibold text-white mb-2">Player Positioning</h3>
+                        <p class="text-gray-300">Analyze player positioning, including formation and shape.</p>
+                    </div>
+                    <div class="bg-dark-900 p-4 rounded-lg shadow-lg w-48 mx-2">
+                        <h3 class="text-xl font-semibold text-white mb-2">Opponent Analysis</h3>
+                        <p class="text-gray-300">Analyze opponent strengths and weaknesses, including playing style and
+                            tactics.</p>
+                    </div>
+                    <div class="bg-dark-900 p-4 rounded-lg shadow-lg w-48 mx-2">
+                        <h3 class="text-xl font-semibold text-white mb-2">Injury Detection</h3>
+                        <p class="text-gray-300">Detect potential injuries to players, including falls, collisions, or
+                            other incidents.</p>
+                    </div>
+                    <div class="bg-dark-900 p-4 rounded-lg shadow-lg w-48 mx-2">
+                        <h3 class="text-xl font-semibold text-white mb-2">Referee Analysis</h3>
+                        <p class="text-gray-300">Analyze referee performance, including accuracy and consistency in
+                            making decisions.</p>
+                    </div>
+                    <div class="bg-dark-900 p-4 rounded-lg shadow-lg w-48 mx-2">
+                        <h3 class="text-xl font-semibold text-white mb-2">Fan Engagement</h3>
+                        <p class="text-gray-300">Analyze fan engagement, including attendance, noise levels, and
+                            emotional responses to the game.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats Card -->
+            <div class="bg-dark-800 p-6 rounded-lg shadow-lg">
+                <h2 class="text-2xl font-semibold text-white mb-4">Stats</h2>
+                <p class="text-gray-300">Our stats feature provides detailed information on player and team performance,
+                    including goals, assists, and clean sheets.</p>
+                <div class="flex flex-row overflow-x-auto">
+                    <div class="bg-dark-900 p-4 rounded-lg shadow-lg w-48 mx-2">
+                        <h3 class="text-xl font-semibold text-white mb-2">Player Performance Heatmap</h3>
+                        <p class="text-gray-300">Visualize player performance metrics, such as goals, assists, and clean
+                            sheets.</p>
+                    </div>
+                    <div class="bg-dark-900 p-4 rounded-lg shadow-lg w-48 mx-2">
+                        <h3 class="text-xl font-semibold text-white mb-2">Radar Chart</h3>
+                        <p class="text-gray-300">Compare player performance metrics, such as passing accuracy, shooting
+                            accuracy, and tackling success rate.</p>
+                    </div>
+                    <div class="bg-dark-900 p-4 rounded-lg shadow-lg w-48 mx-2">
+                        <h3 class="text-xl font-semibold text-white mb-2">Plot Chart</h3>
+                        <p class="text-gray-300">Visualize player performance metrics over time, such as goals, assists,
+                            and clean sheets.</p>
+                    </div>
+                    <div class="bg-dark-900 p-4 rounded-lg shadow-lg w-48 mx-2">
+                        <h3 class="text-xl font-semibold text-white mb-2">Rank Chart</h3>
+                        <p class="text-gray-300">Rank players and teams based on performance metrics, such as goals,
+                            assists, and clean sheets.</p>
+                    </div>
+                    <div class="bg-dark-900 p-4 rounded-lg shadow-lg w-48 mx-2">
+                        <h3 class="text-xl font-semibold text-white mb-2">Goals vs Assists</h3>
+                        <p class="text-gray-300">Compare goals and assists for players and teams.</p>
+                    </div>
+                    <div class="bg-dark-900 p-4 rounded-lg shadow-lg w-48 mx-2">
+                        <h3 class="text-xl font-semibold text-white mb-2">Performance Over Time</h3>
+                        <p class="text-gray-300">Analyze player and team performance over time, including trends and
+                            patterns.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- News Card -->
+            <div class="bg-dark-800 p-6 rounded-lg shadow-lg">
+                <h2 class="text-2xl font-semibold text-white mb-4">News</h2>
+                <p class="text-gray-300">Our news feature provides up-to-date information on football news, including
+                    articles, summaries, and sentiment analysis.</p>
+                <div class="flex flex-row overflow-x-auto">
+                    <div class="bg-dark-900 p-4 rounded-lg shadow-lg w-48 mx-2">
+                        <h3 class="text-xl font-semibold text-white mb-2">Article Summarization</h3>
+                        <p class="text-gray-300">Summarize news articles to provide a quick overview of the content.</p>
+                    </div>
+                    <div class="bg-dark-900 p-4 rounded-lg shadow-lg w-48 mx-2">
+                        <h3 class="text-xl font-semibold text-white mb-2">Sentiment Analysis</h3>
+                        <p class="text-gray-300">Analyze the sentiment of news articles to determine the tone and
+                            emotional response.</p>
+                    </div>
+                    <div class="bg-dark-900 p-4 rounded-lg shadow-lg w-48 mx-2">
+                        <h3 class="text-xl font-semibold text-white mb-2">Entity Recognition</h3>
+                        <p class="text-gray-300">Identify entities, such as players, teams, and leagues, in news
+                            articles.</p>
+                    </div>
+                    <div class="bg-dark-900 p-4 rounded-lg shadow-lg w-48 mx-2">
+                        <h3 class="text-xl font-semibold text-white mb-2">Topic Modeling</h3>
+                        <p class="text-gray-300">Identify topics and themes in news articles to provide a deeper
+                            understanding of the content.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Analysis Card -->
+            <div class="bg-dark-800 p-6 rounded-lg shadow-lg">
+                <h2 class="text-2xl font-semibold text-white mb-4">Analysis</h2>
+                <p class="text-gray-300">Our analysis feature provides in-depth analysis of player and team performance,
+                    including comparison and prediction.</p>
+                <div class="flex flex-row overflow-x-auto">
+                    <div class="bg-dark-900 p-4 rounded-lg shadow-lg w-48 mx-2">
+                        <h3 class="text-xl font-semibold text-white mb-2">Player Comparison</h3>
+                        <p class="text-gray-300">Compare player performance metrics, such as goals, assists, and clean
+                            sheets.</p>
+                    </div>
+                    <div class="bg-dark-900 p-4 rounded-lg shadow-lg w-48 mx-2">
+                        <h3 class="text-xl font-semibold text-white mb-2">Team Comparison</h3>
+                        <p class="text-gray-300">Compare team performance metrics, such as wins, losses, and draws.</p>
+                    </div>
+                    <div class="bg-dark-900 p-4 rounded-lg shadow-lg w-48 mx-2">
+                        <h3 class="text-xl font-semibold text-white mb-2">League Comparison</h3>
+                        <p class="text-gray-300">Compare league performance metrics, such as goals, assists, and clean
+                            sheets.</p>
+                    </div>
+                    <div class="bg-dark-900 p-4 rounded-lg shadow-lg w-48 mx-2">
+                        <h3 class="text-xl font-semibold text-white mb-2">Player Performance Analysis</h3>
+                        <p class="text-gray-300">Analyze player performance metrics, including trends and patterns.</p>
+                    </div>
+                    <div class="bg-dark-900 p-4 rounded-lg shadow-lg w-48 mx-2">
+                        <h3 class="text-xl font-semibold text-white mb-2">Team Performance Analysis</h3>
+                        <p class="text-gray-300">Analyze team performance metrics, including trends and patterns.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fixtures Card -->
+            <div class="bg-dark-800 p-6 rounded-lg shadow-lg">
+                <h2 class="text-2xl font-semibold text-white mb-4">Fixtures</h2>
+                <p class="text-gray-300">Our fixtures feature provides up-to-date information on upcoming matches,
+                    including date, time, teams, and stadium.</p>
+                <div class="flex flex-row overflow-x-auto">
+                    <div class="bg-dark-900 p-4 rounded-lg shadow-lg w-48 mx-2">
+                        <h3 class="text-xl font-semibold text-white mb-2">La Liga (Spain) Fixtures</h3>
+                        <p class="text-gray-300">View upcoming matches for La Liga (Spain).</p>
+                    </div>
+                    <div class="bg-dark-900 p-4 rounded-lg shadow-lg w-48 mx-2">
+                        <h3 class="text-xl font-semibold text-white mb-2">Serie A (Italy) Fixtures</h3>
+                        <p class="text-gray-300">View upcoming matches for Serie A (Italy).</p>
+                    </div>
+                    <div class="bg-dark-900 p-4 rounded-lg shadow-lg w-48 mx-2">
+                        <h3 class="text-xl font-semibold text-white mb-2">Bundesliga (Germany) Fixtures</h3>
+                        <p class="text-gray-300">View upcoming matches for Bundesliga (Germany).</p>
+                    </div>
+                    <div class="bg-dark-900 p-4 rounded-lg shadow-lg w-48 mx-2">
+                        <h3 class="text-xl font-semibold text-white mb-2">Ligue 1 (France) Fixtures</h3>
+                        <p class="text-gray-300">View upcoming matches for Ligue 1 (France).</p>
+                    </div>
+                    <div class="bg-dark-900 p-4 rounded-lg shadow-lg w-48 mx-2">
+                        <h3 class="text-xl font-semibold text-white mb-2">Premier League (England) Fixtures</h3>
+                        <p class="text-gray-300">View upcoming matches for Premier League (England).</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

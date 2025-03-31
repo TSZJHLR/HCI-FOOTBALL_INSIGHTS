@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Analysis | Football Insights</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        dark: {
+                            800: '#1e293b',
+                            900: '#0f172a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .transition-all {
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-dark-900 text-gray-100 flex h-screen">
+    <!-- Sidebar -->
+    <div id="sidebar" class="bg-dark-800 text-white w-64 h-full flex flex-col border-r border-gray-700">
+        <div class="p-4 flex items-center justify-between border-b border-gray-700">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-futbol text-2xl"></i>
+                <span class="font-bold text-xl">Football Insights</span>
+            </div>
+        </div>
+        <nav class="flex-1 overflow-y-auto">
+            <div class="p-2">
+                <a href="index.html" class="flex items-center space-x-3 p-3 rounded hover:bg-gray-700 text-white">
+                    <i class="fas fa-home w-6 text-center"></i>
+                    <span>Homepage</span>
+                </a>
+                <a href="news.html" class="flex items-center space-x-3 p-3 rounded hover:bg-gray-700 text-white">
+                    <i class="fas fa-newspaper w-6 text-center"></i>
+                    <span>News</span>
+                </a>
+                <a href="entertainment.html" class="flex items-center space-x-3 p-3 rounded hover:bg-gray-700 text-white">
+                    <i class="fas fa-video w-6 text-center"></i>
+                    <span>Entertainment</span>
+                </a>
+                <a href="stats.html" class="flex items-center space-x-3 p-3 rounded hover:bg-gray-700 text-white">
+                    <i class="fas fa-table w-6 text-center"></i>
+                    <span>Stats</span>
+                </a>
+                <a href="video.html" class="flex items-center space-x-3 p-3 rounded bg-gray-700 text-white">
+                    <i class="fas fa-upload w-6 text-center"></i>
+                    <span>Video Analysis</span>
+                </a>
+                <a href="analysis.html" class="flex items-center space-x-3 p-3 rounded hover:bg-gray-700 text-white">
+                    <i class="fas fa-chart-bar w-6 text-center"></i>
+                    <span>Comparision</span>
+                </a>
+                <a href="fixtures.html" class="flex items-center space-x-3 p-3 rounded hover:bg-gray-700 text-white">
+                    <i class="fas fa-calendar-alt w-6 text-center"></i>
+                    <span>Fixtures</span>
+                </a>
+                <a href="features.html" class="flex items-center space-x-3 p-3 rounded hover:bg-gray-700 text-white">
+                    <i class="fas fa-list w-6 text-center"></i>
+                    <span>Features</span>
+                </a>
+            </div>
+        </nav>
+        <div class="p-4 border-t border-gray-700">
+            <a href="login.html" class="flex items-center space-x-3 p-3 rounded hover:bg-gray-700 text-white">
+                <i class="fas fa-sign-in-alt w-6 text-center"></i>
+                <span class="nav-text">Login</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="flex-1 overflow-y-auto p-8">
+        <h1 class="text-3xl font-bold text-white mb-6">Video Analysis</h1>
+
+        <div class="bg-dark-800 p-6 rounded-lg shadow-lg mb-6">
+            <h2 class="text-2xl font-semibold text-white mb-4">Upload Match Footage</h2>
+            <div class="border-2 border-dashed border-gray-600 rounded-lg p-8 text-center">
+                <i class="fas fa-cloud-upload-alt text-5xl text-blue-400 mb-4"></i>
+                <p class="mb-4">Drag & drop your match video here or click to browse</p>
+                <input type="file" accept="video/*" class="hidden" id="videoUpload">
+                <button onclick="document.getElementById('videoUpload').click()" 
+                        class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded">
+                    Select Video
+                </button>
+            </div>
+        </div>
+
+        <div class="bg-dark-800 p-6 rounded-lg shadow-lg">
+            <h2 class="text-2xl font-semibold text-white mb-4">Computer Vision Analysis Result</h2>
+            <p class="text-gray-300">Once the video is uploaded, the analysis will be processed using computer vision techniques to generate insights.</p>
+            <!-- Placeholder for analysis results -->
+            <div id="analysisResults" class="mt-4 text-white">
+                <!-- Results will be displayed here after processing -->
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Player Tracking -->
+                <div class="bg-dark-900 p-4 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold text-white mb-2">Player Tracking</h3>
+                    <p class="text-gray-300">Track player movement, speed, and distance covered.</p>
+                    <img src="https://via.placeholder.com/200x100" alt="Player Tracking" class="w-full h-32 object-cover">
+                </div>
+
+                <!-- Ball Detection -->
+                <div class="bg-dark-900 p-4 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold text-white mb-2">Ball Detection</h3>
+                    <p class="text-gray-300">Detect ball location, speed, and trajectory.</p>
+                    <img src="https://via.placeholder.com/200x100" alt="Ball Detection" class="w-full h-32 object-cover">
+                </div>
+
+                <!-- Action Recognition -->
+                <div class="bg-dark-900 p-4 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold text-white mb-2">Action Recognition</h3>
+                    <p class="text-gray-300">Recognize player actions, such as passing, shooting, or tackling.</p>
+                    <img src="https://via.placeholder.com/200x100" alt="Action Recognition" class="w-full h-32 object-cover">
+                </div>
+
+                <!-- Event Detection -->
+                <div class="bg-dark-900 p-4 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold text-white mb-2">Event Detection</h3>
+                    <p class="text-gray-300">Detect specific events, such as goals, penalties, or free kicks.</p>
+                    <img src="https://via.placeholder.com/200x100" alt="Event Detection" class="w-full h-32 object-cover">
+                </div>
+
+                <!-- Player Positioning -->
+                <div class="bg-dark-900 p-4 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold text-white mb-2">Player Positioning</h3>
+                    <p class="text-gray-300">Analyze player positioning, including formation and shape.</p>
+                    <img src="https://via.placeholder.com/200x100" alt="Player Positioning" class="w-full h-32 object-cover">
+                </div>
+
+                <!-- Opponent Analysis -->
+                <div class="bg-dark-900 p-4 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold text-white mb-2">Opponent Analysis</h3>
+                    <p class="text-gray-300">Analyze opponent strengths and weaknesses, including playing style and tactics.</p>
+                    <img src="https://via.placeholder.com/200x100" alt="Opponent Analysis" class="w-full h-32 object-cover">
+                </div>
+
+                <!-- Injury Detection -->
+                <div class="bg-dark-900 p-4 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold text-white mb-2">Injury Detection</h3>
+                    <p class="text-gray-300">Detect potential injuries to players, including falls, collisions, or other incidents.</p>
+                    <img src="https://via.placeholder.com/200x 100" alt="Injury Detection" class="w-full h-32 object-cover">
+                </div>
+
+                <!-- Referee Analysis -->
+                <div class="bg-dark-900 p-4 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold text-white mb-2">Referee Analysis</h3>
+                    <p class="text-gray-300">Analyze referee performance, including accuracy and consistency in making decisions.</p>
+                    <img src="https://via.placeholder.com/200x100" alt="Referee Analysis" class="w-full h-32 object-cover">
+                </div>
+
+                <!-- Fan Engagement -->
+                <div class="bg-dark-900 p-4 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold text-white mb-2">Fan Engagement</h3>
+                    <p class="text-gray-300">Analyze fan engagement, including attendance, noise levels, and emotional responses to the game.</p>
+                    <img src="https://via.placeholder.com/200x100" alt="Fan Engagement" class="w-full h-32 object-cover">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Functionality to handle video upload and analysis
+        document.getElementById('videoUpload').addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            if (file) {
+                // Placeholder for video analysis logic
+                document.getElementById('analysisResults').innerText = `Analyzing ${file.name}...`;
+                // Here you would implement the computer vision analysis logic
+            }
+        });
+    </script>
+</body>
+</html>
+```

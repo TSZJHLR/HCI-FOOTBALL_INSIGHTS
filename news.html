@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News | Football Insights</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        dark: {
+                            800: '#1e293b',
+                            900: '#0f172a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .transition-all {
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+
+<body class="bg-dark-900 text-gray-100 flex h-screen">
+    <!-- Vertical Tab Bar -->
+    <div id="sidebar" class="bg-dark-800 text-white w-64 h-full flex flex-col transition-all border-r border-gray-700">
+        <div class="p-4 flex items-center justify-between border-b border-gray-700">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-futbol text-2xl"></i>
+                <span class="nav-text font-bold text-xl">Football Insights</span>
+            </div>
+        </div>
+
+        <nav class="flex-1 overflow-y-auto">
+            <div class="p-2">
+                <a href="index.html" class="flex items-center space-x-3 p-3 rounded hover:bg-gray-700 text-white">
+                    <i class="fas fa-home w-6 text-center"></i>
+                    <span class="nav-text">Homepage</span>
+                </a>
+                <a href="news.html" class="flex items-center space-x-3 p-3 rounded bg-gray-700 text-white">
+                    <i class="fas fa-newspaper w-6 text-center"></i>
+                    <span class="nav-text">News</span>
+                </a>
+                <a href="entertainment.html"
+                    class="flex items-center space-x-3 p-3 rounded hover:bg-gray-700 text-white">
+                    <i class="fas fa-video w-6 text-center"></i>
+                    <span class="nav-text">Entertainment</span>
+                </a>
+                <a href="stats.html" class="flex items-center space-x-3 p-3 rounded hover:bg-gray-700 text-white">
+                    <i class="fas fa-table w-6 text-center"></i>
+                    <span class="nav-text">Stats</span>
+                </a>
+                <a href="video.html" class="flex items-center space-x-3 p-3 rounded hover:bg-gray-700 text-white">
+                    <i class="fas fa-upload w-6 text-center"></i>
+                    <span class="nav-text">Video Analysis</span>
+                </a>
+                <a href="analysis.html" class="flex items-center space-x-3 p-3 rounded hover:bg-gray-700 text-white">
+                    <i class="fas fa-chart-bar w-6 text-center"></i>
+                    <span class="nav-text">Comparision</span>
+                </a>
+                <a href="fixtures.html" class="flex items-center space-x-3 p-3 rounded hover:bg-gray-700 text-white">
+                    <i class="fas fa-calendar-alt w-6 text-center"></i>
+                    <span>Fixtures</span>
+                </a>
+                <a href="features.html" class="flex items-center space-x-3 p-3 rounded hover:bg-gray-700 text-white">
+                    <i class="fas fa-list w-6 text-center"></i>
+                    <span>Features</span>
+                </a>
+            </div>
+        </nav>
+
+        <div class="p-4 border-t border-gray-700">
+            <a href="login.html" class="flex items-center space-x-3 p-3 rounded hover:bg-gray-700 text-white">
+                <i class="fas fa-sign-in-alt w-6 text-center"></i>
+                <span class="nav-text">Login</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="flex-1 overflow-y-auto p-8">
+        <h1 class="text-3xl font-bold text-white mb-6">Latest Football News</h1>
+
+        <!-- AI Analysis and Summarization Section -->
+        <div class="ai-analysis-section mb-4">
+            <h4 class="text-lg font-semibold mb-2 text-white">AI Analysis and Summarization</h4>
+            <button
+                class="analyze-button bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-2">Analyze
+                Article</button>
+            <div class="analysis-results hidden">
+                <h5 class="text-md font-semibold mb-2 text-white">Summary:</h5>
+                <p class="analysis-summary text-gray-300 mb-4">This article discusses Manchester United's recent tactical shift and its impact on their performance.</p>
+                <h5 class="text-md font-semibold mb-2 text-white">Sentiment Analysis:</h5>
+                <p class="analysis-sentiment text-gray-300 mb-4">The overall sentiment of this article is positive, with a focus on Manchester United's success.</p>
+                <h5 class="text-md font-semibold mb-2 text-white">Key Points:</h5>
+                <ul class="analysis-key-points text-gray-300 mb-4">
+                    <li>Manchester United's new formation led to a decisive victory.</li>
+                    <li>The team's attacking prowess was showcased in the match.</li>
+                    <li>The tactical shift has improved the team's overall performance.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- News Article 1 -->
+            <div class="article-card bg-dark-800 rounded-lg shadow-lg overflow-hidden transition-all duration-300 border border-gray-700">
+                <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Football match" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <div class="flex items-center text-sm text-gray-400 mb-2">
+                        <span>Premier League</span>
+                        <span class="mx-2">•</span>
+                        <span>2 hours ago</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-white">Manchester United Secures Dramatic Last-Minute Victory</h3>
+                    <p class="text-gray-300 mb-4">A stunning goal in added time gives United all three points in a thrilling encounter against their rivals.</p>
+                    <a href="#" class="text-blue-400 font-medium hover:text-blue-300">Read more →</a>
+                </div>
+            </div>
+
+            <!-- News Article 2 -->
+            <div class="article-card bg-dark-800 rounded-lg shadow-lg overflow-hidden transition-all duration-300 border border-gray-700">
+                <img src="https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Football transfer" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <div class="flex items-center text-sm text-gray-400 mb-2">
+                        <span>Transfers</span>
+                        <span class="mx-2">•</span>
+                        <span>5 hours ago</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-white">Breaking: Star Striker Completes Record Transfer</h3>
+                    <p class="text-gray-300 mb-4">The highly anticipated move has finally been confirmed, with the player signing a 5-year contract.</p>
+                    <a href="#" class="text-blue-400 font-medium hover:text-blue-300">Read more →</a>
+                </div>
+            </div>
+
+            <!-- News Article 3 -->
+            <div class="article-card bg-dark-800 rounded-lg shadow-lg overflow-hidden transition-all duration-300 border border-gray-700">
+                <img src="https://images.unsplash.com/photo-1508098682722-e99c47a06b43?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Football training" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <div class="flex items-center text-sm text-gray-400 mb-2">
+                        <span>Training</span>
+                        <span class="mx-2">•</span>
+                        <span>1 day ago</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-white">Inside Look: How Top Teams Prepare for Big Matches</h3>
+                    <p class="text-gray-300 mb-4">Exclusive access to training sessions reveals the meticulous preparation behind championship teams.</p>
+                    <a href="#" class="text-blue-400 font-medium hover:text-blue-300">Read more →</a>
+                </div>
+            </div>
+
+            <!-- Additional Manchester United News Article -->
+            <div class="article-card bg-dark-800 rounded-lg shadow-lg overflow-hidden transition-all duration-300 border border-gray-700">
+                <img src="https://images.unsplash.com/photo-1588702547925-1c1c1c1c1c1c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Manchester United" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <div class="flex items-center text-sm text-gray-400 mb-2">
+                        <span>Manchester United</span>
+                        <span class="mx-2">•</span>
+                        <span>1 hour ago</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-white">Manchester United's New Signing Impresses in Debut</h3>
+                    <p class="text-gray-300 mb-4">The new striker scored a goal and assisted another in a thrilling match against rivals.</p>
+                    <a href="#" class="text-blue-400 font-medium hover:text-blue-300">Read more →</a>
+                </div>
+            </div>
+
+            <!-- Additional Manchester United News Article -->
+            <div class="article-card bg-dark-800 rounded-lg shadow-lg overflow-hidden transition-all duration-300 border border-gray-700">
+                <img src="https://images.unsplash.com/photo-1593642632870-3a3a3a3a3a3a?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Manchester United" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <div class="flex items-center text-sm text-gray-400 mb-2">
+                        <span>Manchester United</span>
+                        <span class="mx-2">•</span>
+                        <span>3 hours ago</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-white">Manchester United's Tactical Shift Pays Off</h3>
+                    <p class="text-gray-300 mb-4">The new formation led to a decisive victory, showcasing the team's attacking prowess.</p>
+                    <a href="#" class="text-blue-400 font-medium hover:text-blue-300">Read more →</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

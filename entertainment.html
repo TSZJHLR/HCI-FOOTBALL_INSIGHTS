@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entertainment | Football Insights</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        dark: {
+                            800: '#1e293b',
+                            900: '#0f172a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .collapsed {
+            width: 4rem;
+            background-color: #1e293b;
+            /* Ensure background color remains */
+        }
+
+        .collapsed .nav-text {
+            display: none;
+        }
+
+        .transition-all {
+            transition: all 0.3s ease;
+        }
+
+        .video-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .video-thumbnail::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .video-thumbnail:hover::after {
+            background: rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body class="bg-dark-900 text-gray-100 flex h-screen">
+    <!-- Sidebar -->
+    <div id="sidebar" class="bg-dark-800 text-white w-64 h-full flex flex-col border-r border-gray-700">
+        <div class="p-4 flex items-center justify-between border-b border-gray-700">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-futbol text-2xl"></i>
+                <span class="font-bold text-xl">Football Insights</span>
+            </div>
+        </div>
+        <nav class="flex-1 overflow-y-auto">
+            <div class="p-2">
+                <a href="index.html" class="flex items-center space-x-3 p-3 rounded hover:bg-gray-700 text-white">
+                    <i class="fas fa-home w-6 text-center"></i>
+                    <span>Homepage</span>
+                </a>
+                <a href="news.html" class="flex items-center space-x-3 p-3 rounded hover:bg-gray-700 text-white">
+                    <i class="fas fa-newspaper w-6 text-center"></i>
+                    <span>News</span>
+                </a>
+                <a href="entertainment.html" class="flex items-center space-x-3 p-3 rounded bg-gray-700 text-white">
+                    <i class="fas fa-video w-6 text-center"></i>
+                    <span>Entertainment</span>
+                </a>
+                <a href="stats.html" class="flex items-center space-x-3 p-3 rounded hover:bg-gray-700 text-white">
+                    <i class="fas fa-table w-6 text-center"></i>
+                    <span>Stats</span>
+                </a>
+                <a href="video.html" class="flex items-center space-x-3 p-3 rounded hover:bg-gray-700 text-white">
+                    <i class="fas fa-upload w-6 text-center"></i>
+                    <span>Video Analysis</span>
+                </a>
+                <a href="analysis.html" class="flex items-center space-x-3 p-3 rounded hover:bg-gray-700 text-white">
+                    <i class="fas fa-chart-bar w-6 text-center"></i>
+                    <span>Comparision</span>
+                </a>
+                <a href="fixtures.html" class="flex items-center space-x-3 p-3 rounded hover:bg-gray-700 text-white">
+                    <i class="fas fa-calendar-alt w-6 text-center"></i>
+                    <span>Fixtures</span>
+                </a>
+                <a href="features.html" class="flex items-center space-x-3 p-3 rounded hover:bg-gray-700 text-white">
+                    <i class="fas fa-list w-6 text-center"></i>
+                    <span>Features</span>
+                </a>
+            </div>
+        </nav>
+        <div class="p-4 border-t border-gray-700">
+            <a href="login.html" class="flex items-center space-x-3 p-3 rounded hover:bg-gray-700 text-white">
+                <i class="fas fa-sign-in-alt w-6 text-center"></i>
+                <span class="nav-text">Login</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="flex-1 overflow-y-auto p-8">
+        <h1 class="text-3xl font-bold text-white mb-6">Entertainment Section</h1>
+
+        <!-- European Competitions -->
+        <div class="bg-dark-800 p-6 rounded-lg shadow-lg mb-6">
+            <h2 class="text-2xl font-semibold text-white mb-4">European Competitions</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- UEFA Champions League -->
+                <div class="video-card bg-dark-800 rounded-lg overflow-hidden shadow-lg">
+                    <div class="relative video-thumbnail">
+                        <img src="ucl-logo.png" alt="UCL Logo" class="w-full h-48 object-cover">
+                        <a href="#" class="absolute inset-0 flex items-center justify-center text-white text-2xl">
+                            <i class="fas fa-play-circle"></i>
+                        </a>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-white">UCL Match Highlights</h3>
+                        <p class="text-gray-300">Watch the best moments from the UEFA Champions League.</p>
+                    </div>
+                </div>
+
+                <!-- UEFA Europa League -->
+                <div class="video-card bg-dark-800 rounded-lg overflow-hidden shadow-lg">
+                    <div class="relative video-thumbnail">
+                        <img src="uel-logo.png" alt="UEL Logo" class="w-full h-48 object-cover">
+                        <a href="#" class="absolute inset-0 flex items-center justify-center text-white text-2xl">
+                            <i class="fas fa-play-circle"></i>
+                        </a>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-white">UEL Match Highlights</h3>
+                        <p class="text-gray-300">Watch the best moments from the UEFA Europa League.</p>
+                    </div>
+                </div>
+
+                <!-- UEFA Europa Conference League -->
+                <div class="video-card bg-dark-800 rounded-lg overflow-hidden shadow-lg">
+                    <div class="relative video-thumbnail">
+                        <img src="uecl-logo.png" alt="UECL Logo" class="w-full h-48 object-cover">
+                        <a href="#" class="absolute inset-0 flex items-center justify-center text-white text-2xl">
+                            <i class="fas fa-play-circle"></i>
+                        </a>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-white">UECL Match Highlights</h3>
+                        <p class="text-gray-300">Watch the best moments from the UEFA Europa Conference League.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Domestic Competitions -->
+        <div class="bg-dark-800 p-6 rounded-lg shadow-lg mb-6">
+            <h2 class="text-2xl font-semibold text-white mb-4">Domestic Competitions</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- FA Cup -->
+                <div class="video-card bg-dark-800 rounded-lg overflow-hidden shadow-lg">
+                    <div class="relative video-thumbnail">
+                        <img src="fa-cup-logo.png" alt="FA Cup Logo" class="w-full h-48 object-cover">
+                        <a href="#" class="absolute inset-0 flex items-center justify-center text-white text-2xl">
+                            <i class="fas fa-play-circle"></i>
+                        </a>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-white">FA Cup Match Highlights</h3>
+                        <p class="text-gray-300">Watch the best moments from the FA Cup.</p>
+                    </div>
+                </div>
+
+                <!-- Copa del Rey -->
+                <div class="video-card bg-dark-800 rounded-lg overflow-hidden shadow-lg">
+                    <div class="relative video-thumbnail">
+                        <img src="copa-del-rey-logo.png" alt="Copa del Rey Logo" class="w-full h-48 object-cover">
+                        <a href="#" class="absolute inset-0 flex items-center justify-center text-white text-2xl">
+                            <i class="fas fa-play-circle"></i>
+                        </a>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-white">Copa del Rey Match Highlights</h3>
+                        <p class="text-gray-300">Watch the best moments from the Copa del Rey.</p>
+                    </div>
+                </div>
+
+                <!-- DFB-Pokal -->
+                <div class="video-card bg-dark-800 rounded-lg overflow-hidden shadow-lg">
+                    <div class="relative video-thumbnail">
+                        <img src="dfb-pokal-logo.png" alt="DFB-Pokal Logo" class="w-full h-48 object-cover">
+                        <a href="#" class="absolute inset-0 flex items-center justify-center text-white text-2xl">
+                            <i class="fas fa-play-circle"></i>
+                        </a>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-white">DFB-Pokal Match Highlights</h3>
+                        <p class="text-gray-300">Watch the best moments from the DFB-Pokal.</p>
+                    </div>
+                </div>
+
+                <!-- Coupe de France -->
+                <div class="video-card bg-dark-800 rounded-lg overflow-hidden shadow-lg">
+                    <div class="relative video-thumbnail">
+                        <img src="coupe-de-france-logo.png" alt="Coupe de France Logo" class="w-full h-48 object-cover">
+                        <a href="#" class="absolute inset-0 flex items-center justify-center text-white text-2xl">
+                            <i class="fas fa-play-circle"></i>
+                        </a>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-white">Coupe de France Match Highlights</h3>
+                        <p class="text-gray-300">Watch the best moments from the Coupe de France.</p>
+                    </div>
+                </div>
+
+                <!-- Coppa Italia -->
+                <div class="video-card bg-dark-800 rounded-lg overflow-hidden shadow-lg">
+                    <div class="relative video-thumbnail">
+                        <img src="coppa-italia-logo.png" alt="Coppa Italia Logo" class="w-full h-48 object-cover">
+                        <a href="#" class="absolute inset-0 flex items-center justify-center text-white text-2xl">
+                            <i class="fas fa-play-circle"></i>
+                        </a>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-white">Coppa Italia Match Highlights</h3>
+                        <p class="text-gray-300">Watch the best moments from the Coppa Italia.</p>
+                    </div>
+                </div>
+
+                <!-- KNVB Cup -->
+                <div class="video-card bg-dark-800 rounded-lg overflow-hidden shadow-lg">
+                    <div class="relative video-thumbnail">
+                        <img src="knvb-cup-logo.png" alt="KNVB Cup Logo" class="w-full h-48 object-cover">
+                        <a href="#" class="absolute inset-0 flex items-center justify-center text-white text-2xl">
+                            <i class="fas fa-play-circle"></i>
+                        </a>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-white">KNVB Cup Match Highlights</h3>
+                        <p class="text-gray-300">Watch the best moments from the KNVB Cup.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- International Features -->
+        <div class="bg-dark-800 p-6 rounded-lg shadow-lg mb-6">
+            <h2 class="text-2xl font-semibold text-white mb-4">International Features</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- FIFA World Cup -->
+                <div class="video-card bg-dark-800 rounded-lg overflow-hidden shadow-lg">
+                    <div class="relative video-thumbnail">
+                        <img src="fifa-world-cup-logo.png" alt="FIFA World Cup Logo" class="w-full h-48 object-cover">
+                        <a href="#" class="absolute inset-0 flex items-center justify-center text-white text-2xl">
+                            <i class="fas fa-play-circle"></i>
+                        </a>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-white">FIFA World Cup Highlights</h3>
+                        <p class="text-gray-300">Watch the best moments from the FIFA World Cup.</p>
+                    </div>
+                </div>
+
+                <!-- UEFA European Championship -->
+                <div class="video-card bg-dark-800 rounded-lg overflow-hidden shadow-lg">
+                    <div class="relative video-thumbnail">
+                        <img src="uefa-european-championship-logo.png" alt="UEFA Euro Logo"
+                            class="w-full h-48 object-cover">
+                        <a href="#" class="absolute inset-0 flex items-center justify-center text-white text-2xl">
+                            <i class="fas fa-play-circle"></i>
+                        </a>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-white">UEFA Euros Highlights</h3>
+                        <p class="text-gray-300">Watch the best moments from the UEFA European Championship.</p>
+                    </div>
+                </div>
+
+                <!-- Copa America -->
+                <div class="video-card bg-dark-800 rounded-lg overflow-hidden shadow-lg">
+                    <div class="relative video-thumbnail">
+                        <img src="copa-america-logo.png" alt="Copa America Logo" class="w-full h-48 object-cover">
+                        <a href="#" class="absolute inset-0 flex items-center justify-center text-white text-2xl">
+                            <i class="fas fa-play-circle"></i>
+                        </a>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-white">Copa America Highlights</h3>
+                        <p class="text-gray-300">Watch the best moments from the Copa America.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

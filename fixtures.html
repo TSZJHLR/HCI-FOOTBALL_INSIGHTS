@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixtures | Football Insights</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        dark: {
+                            800: '#1e293b',
+                            900: '#0f172a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .transition-all {
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-dark-900 text-gray-100 flex h-screen">
+    <!-- Sidebar -->
+    <div id="sidebar" class="bg-dark-800 text-white w-64 h-full flex flex-col border-r border-gray-700">
+        <div class="p-4 flex items-center justify-between border-b border-gray-700">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-futbol text-2xl"></i>
+                <span class="font-bold text-xl">Football Insights</span>
+            </div>
+        </div>
+        <nav class="flex-1 overflow-y-auto">
+            <div class="p-2">
+                <a href="index.html" class="flex items-center space-x-3 p-3 rounded hover:bg-gray-700 text-white">
+                    <i class="fas fa-home w-6 text-center"></i>
+                    <span>Homepage</span>
+                </a>
+                <a href="news.html" class="flex items-center space-x-3 p-3 rounded hover:bg-gray-700 text-white">
+                    <i class="fas fa-newspaper w-6 text-center"></i>
+                    <span>News</span>
+                </a>
+                <a href="entertainment.html" class="flex items-center space-x-3 p-3 rounded hover:bg-gray-700 text-white">
+                    <i class="fas fa-video w-6 text-center"></i>
+                    <span>Entertainment</span>
+                </a>
+                <a href="stats.html" class="flex items-center space-x-3 p-3 rounded hover:bg-gray-700 text-white">
+                    <i class="fas fa-table w-6 text-center"></i>
+                    <span>Stats</span>
+                </a>
+                <a href="video.html" class="flex items-center space-x-3 p-3 rounded hover:bg-gray-700 text-white">
+                    <i class="fas fa-upload w-6 text-center"></i>
+                    <span>Video Analysis</span>
+                </a>
+                <a href="analysis.html" class="flex items-center space-x-3 p-3 rounded hover:bg-gray-700 text-white">
+                    <i class="fas fa-chart-bar w-6 text-center"></i>
+                    <span>Comparision</span>
+                </a>
+                <a href="fixtures.html" class="flex items-center space-x-3 p-3 rounded bg-gray-700 text-white">
+                    <i class="fas fa-calendar-alt w-6 text-center"></i>
+                    <span>Fixtures</span>
+                </a>
+                <a href="features.html" class="flex items-center space-x-3 p-3 rounded hover:bg-gray-700 text-white">
+                    <i class="fas fa-list w-6 text-center"></i>
+                    <span>Features</span>
+                </a>
+            </div>
+        </nav>
+        <div class="p-4 border-t border-gray-700">
+            <a href="login.html" class="flex items-center space-x-3 p-3 rounded hover:bg-gray-700 text-white">
+                <i class="fas fa-sign-in-alt w-6 text-center"></i>
+                <span class="nav-text">Login</span>
+            </a>
+        </div>
+    </div>
+
+<!-- Main Content -->
+<div class="flex-1 overflow-y-auto p-8">
+    <h1 class="text-3xl font-bold text-white mb-6">Fixtures</h1>
+
+    <!-- Premier League (England) -->
+    <div class="bg-dark-800 p-6 rounded-lg shadow-lg mb-6">
+        <h2 class="text-2xl font-semibold text-white mb-4">Premier League (England)</h2>
+        <div class="text-lg font-medium text-white mb-4 text-center">2023-10-15</div>
+        <div class="flex items-center justify-between mb-4">
+            <span class="text-lg font-medium text-white">Manchester United</span>
+            <span class="text-lg font-medium text-white">20:00</span>
+            <span class="text-lg font-medium text-white">Liverpool</span>
+        </div>
+        <div class="text-lg font-medium text-white mb-4 text-center">2023-10-16</div>
+        <div class="flex items-center justify-between mb-4">
+            <span class="text-lg font-medium text-white">Chelsea</span>
+            <span class="text-lg font-medium text-white">18:00</span>
+            <span class="text-lg font-medium text-white">Arsenal</span>
+        </div>
+    </div>
+    
+    <!-- La Liga (Spain) -->
+    <div class="bg-dark-800 p-6 rounded-lg shadow-lg mb-6">
+        <h2 class="text-2xl font-semibold text-white mb-4">La Liga (Spain)</h2>
+        <div class="text-lg font-medium text-white mb-4 text-center">2023-10-15</div>
+        <div class="flex items-center justify-between mb-4">
+            <span class="text-lg font-medium text-white">Barcelona</span>
+            <span class="text-lg font-medium text-white">20:00</span>
+            <span class="text-lg font-medium text-white">Real Madrid</span>
+        </div>
+        <div class="text-lg font-medium text-white mb-4 text-center">2023-10-16</div>
+        <div class="flex items-center justify-between mb-4">
+            <span class="text-lg font-medium text-white">Atletico Madrid</span>
+            <span class="text-lg font-medium text-white">18:00</span>
+            <span class="text-lg font-medium text-white">Sevilla</span>
+        </div>
+    </div>
+
+    <!-- Serie A (Italy) -->
+    <div class="bg-dark-800 p-6 rounded-lg shadow-lg mb-6">
+        <h2 class="text-2xl font-semibold text-white mb-4">Serie A (Italy)</h2>
+        <div class="text-lg font-medium text-white mb-4 text-center">2023-10-15</div>
+        <div class="flex items-center justify-between mb-4">
+            <span class="text-lg font-medium text-white">Juventus</span>
+            <span class="text-lg font-medium text-white">20:00</span>
+            <span class="text-lg font-medium text-white">AC Milan</span>
+        </div>
+        <div class="text-lg font-medium text-white mb-4 text-center">2023-10-16</div>
+        <div class="flex items-center justify-between mb-4">
+            <span class="text-lg font-medium text-white">Inter Milan</span>
+            <span class="text-lg font-medium text-white">18:00</span>
+            <span class="text-lg font-medium text-white">Napoli</span>
+        </div>
+    </div>
+
+    <!-- Bundesliga (Germany) -->
+    <div class="bg-dark-800 p-6 rounded-lg shadow-lg mb-6">
+        <h2 class="text-2xl font-semibold text-white mb-4">Bundesliga (Germany)</h2>
+        <div class="text-lg font-medium text-white mb-4 text-center">2023-10-15</div>
+        <div class="flex items-center justify-between mb-4">
+            <span class="text-lg font-medium text-white">Bayern Munich</span>
+            <span class="text-lg font-medium text-white">20:00</span>
+            <span class="text-lg font-medium text-white">Borussia Dortmund</span>
+        </div>
+        <div class="text-lg font-medium text-white mb-4 text-center">2023-10-16</div>
+        <div class="flex items-center justify-between mb-4">
+            <span class="text-lg font-medium text-white">RB Leipzig</span>
+            <span class="text-lg font-medium text-white">18:00</span>
+            <span class="text-lg font-medium text-white">Bayer Leverkusen</span>
+        </div>
+    </div>
+
+    <!-- Ligue 1 (France) -->
+    <div class="bg-dark-800 p-6 rounded-lg shadow-lg mb-6">
+        <h2 class="text-2xl font-semibold text-white mb-4">Ligue 1 (France)</h2>
+        <div class="text-lg font-medium text-white mb-4 text-center">2023-10-15</div>
+        <div class="flex items-center justify-between mb-4">
+            <span class="text-lg font-medium text-white">PSG</span>
+            <span class="text-lg font-medium text-white">20:00</span>
+            <span class="text-lg font-medium text-white">Lyon</span>
+        </div>
+        <div class="text-lg font-medium text-white mb-4 text-center">2023-10-16</div>
+        <div class="flex items-center justify-between mb-4">
+            <span class="text-lg font-medium text-white">Marseille</span>
+            <span class="text-lg font-medium text-white">18:00</span>
+            <span class="text-lg font-medium text-white">Monaco</span>
+        </div>
+    </div>
+
+
+</div>
+
+</body>
+</html>
